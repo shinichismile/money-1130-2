@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans antialiased;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-indigo-600 to-indigo-700 text-white 
+           hover:from-indigo-700 hover:to-indigo-800 
+           shadow-sm hover:shadow-md;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-gray-800 hover:bg-gray-50 
+           border border-gray-200 hover:border-gray-300 
+           shadow-sm hover:shadow-md;
+  }
+
+  .form-input {
+    @apply block w-full rounded-md border-gray-300 shadow-sm
+           focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700;
+  }
+
+  .form-error {
+    @apply mt-1 text-sm text-red-600;
+  }
+}
